@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.hw6.databinding.ItemRecyclerBinding
 
 class ContactsAdapter(
-    private var onItemClick: (id: Int) -> Unit
+    private var onItemClick: (id: Int) -> Unit,
+    private var onItemLongClick: (idLong: Int) -> Unit
 ) : RecyclerView.Adapter<ContactsViewHolder>() {
 
     private var list = arrayListOf<Contact>()
@@ -26,11 +27,21 @@ class ContactsAdapter(
 
 
     override fun onBindViewHolder(holder: ContactsViewHolder, position: Int) {
-        holder.bind(list[position]) {
-        }
+        holder.bind(list[position], {
+
+        },{
+
+        })
+
         holder.itemView.setOnClickListener {
-            onItemClick?.invoke(list[position].id)
+            onItemClick.invoke(list[position].id)
         }
+        holder.itemView.setOnLongClickListener {
+            onItemLongClick.invoke(list[position].id)
+            true
+        }
+
+
     }
 
     @SuppressLint("NotifyDataSetChanged")
@@ -40,3 +51,4 @@ class ContactsAdapter(
     }
 
 }
+

@@ -8,36 +8,36 @@
 
     <TextView
         android:id="@+id/contact_id"
-        android:layout_width="@dimen/dp_60"
-        android:layout_height="@dimen/dp_60"
-        android:textSize="@dimen/dp_10"
+        android:layout_width="@dimen/dp_30"
+        android:layout_height="@dimen/dp_70"
+        android:textSize="@dimen/dp_14"
         tools:ignore="SpUsage" />
 
     <TextView
         android:id="@+id/contact_first_name"
-        android:layout_width="@dimen/dp_60"
-        android:layout_height="@dimen/dp_60"
-        android:textSize="@dimen/dp_10"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_70"
+        android:textSize="@dimen/dp_14"
         tools:ignore="SpUsage" />
 
     <TextView
         android:id="@+id/contact_second_name"
-        android:layout_width="@dimen/dp_60"
-        android:layout_height="@dimen/dp_60"
-        android:textSize="@dimen/dp_10"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_70"
+        android:textSize="@dimen/dp_14"
         tools:ignore="SpUsage" />
 
     <TextView
         android:id="@+id/contact_phone_number"
-        android:layout_width="@dimen/dp_60"
-        android:layout_height="@dimen/dp_60"
-        android:textSize="@dimen/dp_10"
+        android:layout_width="@dimen/dp_70"
+        android:layout_height="@dimen/dp_70"
+        android:textSize="@dimen/dp_14"
         tools:ignore="SpUsage" />
 
     <ImageView
         android:id="@+id/contact_image"
         android:layout_width="@dimen/dp_170"
-        android:layout_height="@dimen/dp_60">
+        android:layout_height="@dimen/dp_70">
 
     </ImageView>
 
