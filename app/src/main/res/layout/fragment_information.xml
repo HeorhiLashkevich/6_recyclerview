@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="400dp"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/first_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_60"
+        android:gravity="center"
+        android:hint="@string/first_name">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/edit_first_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:gravity="center"
+        android:hint="@string/write_a_new_first_name">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/second_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_60"
+        android:gravity="center"
+        android:hint="@string/second_name">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/edit_second_name"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:gravity="center"
+        android:hint="@string/write_a_new_second_name">
+
+    </EditText>
+
+    <TextView
+        android:id="@+id/phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:layout_marginTop="@dimen/dp_60"
+        android:gravity="center"
+        android:hint="@string/phone_number">
+
+    </TextView>
+
+    <EditText
+        android:id="@+id/edit_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_60"
+        android:gravity="center"
+        android:hint="@string/write_a_new_phone_number">
+
+    </EditText>
+
+    <Button
+        android:id="@+id/save_changes_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_60"
+        android:text="@string/save_changes">
+
+    </Button>
+
+</LinearLayout>

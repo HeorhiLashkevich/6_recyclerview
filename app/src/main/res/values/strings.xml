@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">hw6</string>
+    <string name="empty">empty</string>
+    <string name="first_name">first name</string>
+    <string name="second_name">second name</string>
+    <string name="phone_number">phone number</string>
+    <string name="write_a_new_first_name">write a new first name</string>
+    <string name="write_a_new_second_name">write a new second name</string>
+    <string name="write_a_new_phone_number">write a new phone number</string>
+    <string name="save_changes">save changes</string>
+</resources>
