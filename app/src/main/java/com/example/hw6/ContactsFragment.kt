@@ -9,7 +9,9 @@ import android.widget.SearchView
 import androidx.activity.OnBackPressedCallback
 import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.fragment.app.Fragment
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 
 import com.example.hw6.databinding.FragmentContactsBinding
 import java.util.*
@@ -83,19 +85,26 @@ class ContactsFragment : Fragment(R.layout.fragment_contacts) {
     }
 
 
+    @SuppressLint("UseCompatLoadingForDrawables")
     private fun initAdapter(list: java.util.ArrayList<Contact>) {
         val adapter = ContactsAdapter({
             parentFragmentManager.beginTransaction()
                 .replace(R.id.container, InformationFragment(it))
                 .addToBackStack("")
                 .commit()
-        }){
-            list.removeAt(it-1)
+        }) {
+            list.removeAt(it - 1)
             initAdapter(list)
 
         }
+        val itemMargin = ContactMargin()
+        val dividerItemDecoration = DividerItemDecoration(context, RecyclerView.VERTICAL)
+        dividerItemDecoration.setDrawable(resources.getDrawable(R.drawable.divider_drawable))
+        binding?.recyclerContacts?.run {
+            addItemDecoration(dividerItemDecoration)
+            addItemDecoration(itemMargin)
 
-
+        }
         binding?.recyclerContacts?.layoutManager =
             LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         binding?.recyclerContacts?.adapter = adapter
